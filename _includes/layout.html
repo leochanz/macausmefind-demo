@@ -24,6 +24,17 @@
       <a href='/'>Home</a>
     </nav>
     </header>
+   
+ <ul>
+{% for post in collections.post reversed %} 
+  <li>
+    <a href="">
+      {{ post.data.title }}
+    </a>
+  </li>
+{% endfor %} 
+</ul>
+   
   <main>
        {{content}}
   </main>
