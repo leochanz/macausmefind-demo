@@ -20,31 +20,6 @@
 <body>
 
 <script>// Require variables to be declared prior to use
-var button // Represents the 'button' div
-var payload // Represents the div that will be hidden
-
-
-// Called when the 'button' div is clicked.
-// Toggles the 'payload' div's membership of the 'hidden' class.
-function togglePayload() {
-payload.classList.toggle('hidden');
-}
-
-
-// Sets everything up. Called automatically when the page loads.
-function init() {
-// Connect the button variable with the button div
-button = document.querySelector('.button')
-
-// Connect the payload variable with the payload div
-payload = document.querySelector('.payload')
-
-// Call the togglePayload function when the button div is clicked
-button.onclick = togglePayload;
-}
-// Run the init function when the page loads.
-document.addEventListener("DOMContentLoaded", init, false);
-
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
 }
