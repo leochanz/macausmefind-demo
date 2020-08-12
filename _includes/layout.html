@@ -11,6 +11,7 @@
       padding: 1em;
     }
   </style>
+  <script src=".eleventy.js"></script>
  </head>
  <body>
    <header>
@@ -24,7 +25,8 @@
       <a href='/'>Home</a>
     </nav>
     </header>
-   
+ 
+<div>
  <ul>
 {% for post in collections.post reversed %} 
   <li>
@@ -34,6 +36,9 @@
   </li>
 {% endfor %} 
 </ul>
+   
+<p>My latest post is {% lastPostTitle collections.post %}.</p>
+</div>
    
 <h2>Latest 3 Tasks</h2>
 <ul>
