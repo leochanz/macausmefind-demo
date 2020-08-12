@@ -35,6 +35,16 @@
 {% endfor %} 
 </ul>
    
+<h2>Latest 3 Tasks</h2>
+<ul>
+{% for task in collections.lastThreeTasks %}
+  <li class="is-done-">
+    {{ task.date toISOString }}
+    {{ task.data.title }}
+  </li>
+{% endfor %}
+</ul>
+   
   <main>
        {{content}}
   </main>
