@@ -19,5 +19,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("lastThreeTasks", function(collection) {
     return collection.getFilteredByTag('task').slice(-3).reverse()
   });
+  
+  eleventyConfig.addShortcode("lastPostTitle", function(collection) {
+    return collection[collection.length-1].data.title
+  });
+
 }
 
