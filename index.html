@@ -12,9 +12,7 @@ pagination:
   addAllPagesToCollections: true
 permalink: /category//
 eleventyComputed:
-eleventyComputed:
-  title: Tagged “{{ tag }}”
-permalink: /tags/{{ tag }}/
+  title: ""
 ---
 
 # 
@@ -24,11 +22,3 @@ Posts in <a href='/category/'></a> category. List [all categories](/categories/)
 <ul class="post-list">
 
 </ul>
-
-<h1>Tagged “{{ tag }}”</h1>
-
-{% set postslist = collections[ tag ] %}
-{% include "postslist.njk" %}
-
-<p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
----
