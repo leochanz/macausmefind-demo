@@ -1,5 +1,8 @@
 module.exports = function(eleventyConfig) {
   
+  // If we use Netlify and has the _redirects file.
+  eleventyConfig.addPassthroughCopy("_redirects");
+  
   eleventyConfig.addCollection("tagList", function(collection) {
   let tagSet = new Set();
   collection.getAll().forEach(function(item) {
